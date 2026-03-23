@@ -1,7 +1,7 @@
 # 🛡️ CivicShield — Smart City Safety Platform
 
 > **Anonymous · AI-Verified · Police-Connected**  
-> Report incidents without fear. Claude AI verifies. Police respond.
+> Report incidents without fear. AI verifies. Police respond.
 
 ---
 
