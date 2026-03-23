@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# 🛡️ CivicShield — Smart City Safety Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> **Anonymous · AI-Verified · Police-Connected**  
+> Report incidents without fear. Claude AI verifies. Police respond.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚨 Problem Statement
 
-### `npm start`
+In India, thousands of crimes go unreported every day — not because people don't witness them, but because:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Fear of retaliation** — Revealing identity to police means criminals can track you down
+- **Legal fatigue** — *"Court ke chakkar mein kaun padega?"* — endless hearings discourage witnesses  
+- **No safe channel** — Existing systems require full identity, leaving bystanders exposed
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Result:** Criminals operate with confidence. Police lack evidence. Justice fails.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✅ Our Solution
 
-### `npm run build`
+CivicShield is a civic safety platform where:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 🔒 **Witnesses report anonymously** — zero personal data stored, ever
+- 🤖 **Claude AI scores each report** — 0–100 credibility check before forwarding to police
+- 📍 **Live camera stamps GPS + time** on evidence automatically
+- 🏛️ **Police dashboard** receives only verified, credible reports
+- ⏱️ **Proximity & time checks** — reports filed late or from far away are auto-rejected
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✨ Key Features
 
-### `npm run eject`
+| Feature | Description |
+|---|---|
+| Anonymous Reporting | Witness identity never stored — token-based tracking only |
+| AI Credibility Scoring | Claude Sonnet 4 scores reports across 6 signals |
+| Live Camera Evidence | GPS + timestamp watermarked on photos/videos in-app |
+| Category-Specific Scoring | Crime, Accident, Harassment each have different thresholds |
+| Police Dashboard | Real-time case management, officer assignment, FIR recording |
+| Demo Mode | Toggle to bypass AI threshold for testing |
+| 500m Proximity Check | Reporter must be near incident — fake reports rejected |
+| 2-Hour Time Window | Reports filed too late are automatically flagged |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Layer | Technology |
+|---|---|
+| Frontend | React (JSX), Inline CSS-in-JS |
+| AI Engine | Anthropic Claude API (claude-sonnet-4) |
+| Animations | GSAP 3 + ScrollTrigger |
+| GPS | Browser `navigator.geolocation` + OpenStreetMap Nominatim |
+| Camera | `mediaDevices.getUserMedia` + Canvas API (watermark) |
+| Video | `MediaRecorder` API |
+| Fonts | Bebas Neue, Syne, DM Sans (Google Fonts) |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> ⚡ Currently pure frontend — no backend, no database. State managed in React `useState`.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 How to Run Locally
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Prerequisites:** Node.js 16+ and npm
+```bash
+# 1. Clone the repository
+git clone https://github.com/YOUR_USERNAME/civicshield.git
+cd civicshield
 
-### Code Splitting
+# 2. Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 3. Start the development server
+npm start
+```
 
-### Analyzing the Bundle Size
+App will open at `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🔑 API Key Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project uses the **Anthropic Claude API** for AI credibility scoring.
 
-### Advanced Configuration
+- When running inside **claude.ai** — API key is automatically injected, no setup needed
+- For local/standalone use — you will need to add your own Anthropic API key
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> Get your API key at [console.anthropic.com](https://console.anthropic.com)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🧪 Demo Credentials
 
-### `npm run build` fails to minify
+**Police Station Login** (for testing the dashboard):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Station | Password |
+|---|---|
+| Vijay Nagar PS | `vjn@2026` |
+| MG Road PS | `mgr@2026` |
+| Palasia PS | `pal@2026` |
+
+Enable **Demo Mode** from the nav toggle to bypass AI scoring threshold during testing.
+
+---
+
+## 📁 Project Structure
+```
+src/
+├── civicshield.jsx    ← Main application (all components)
+└── App.js             ← Entry point
+```
+
+---
+
+## 👨‍💻 Built By
+
+**Ayush Sahu** — Built for Indore Smart City Initiative · 2026
